@@ -1,9 +1,14 @@
-import React from 'react'
-import Register from './Register'
+import React, { useContext } from 'react';
+import RegisterAndLoginForm from './RegisterAndLoginForm';
+import { UserContext } from './UserContext';
 
 export default function Routes() {
-  return (
-    <Register />
-  )
+    const { username, id } = useContext(UserContext);
+    if (username) {
+        return 'Current User: ' + username;
+    }
+    return (       
+        <RegisterAndLoginForm />
+    )
 };
 
