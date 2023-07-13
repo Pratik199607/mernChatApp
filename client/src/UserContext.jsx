@@ -7,7 +7,7 @@ export function UserContextProvider({children})  {
     const [id, setId] = useState(null);
     useEffect(() => {
         axios.get('/profile',{withCredentials:true}).then(res => {
-            console.log(res.data);
+            // console.log(res.data);
             setId(res.data.userId);
             setUsername(res.data.username);
         });

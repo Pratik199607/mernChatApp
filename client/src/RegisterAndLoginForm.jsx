@@ -15,6 +15,8 @@ export default function RegisterAndLoginForm(){
         setLoggedInUsername(username);
         setId(data.id);
         console.log(data);
+
+        // document.cookie = `token=${data.token}; sameSite=none; secure`;
     }
 
     return (
